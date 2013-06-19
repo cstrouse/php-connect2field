@@ -1,0 +1,3 @@
+# Connect2Field PHP SDK
+
+Connect2Field is a SaaS platform for service-oriented business such as pest control and landscaping companies to manage their business. I needed to do some custom integration with their API and wanted a better way to interact with their .NET web service than making raw curl calls to their system. This library aims to make building PHP-based integrations with the Connect2Field platform more pleasant.
