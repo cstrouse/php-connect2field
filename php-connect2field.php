@@ -49,6 +49,16 @@ class Connect2Field {
 		return $response->d;
 	}
 	
+	public function all_account_types() {
+		$response = $this::get_helper("AccountTypeMs");
+		return $response->d;
+	}
+	
+	public function get_account_type($id) {
+		$response = $this::get_helper("AccountTypeMs($id)");
+		return $response->d;
+	}
+	
 }
 
 ?>
