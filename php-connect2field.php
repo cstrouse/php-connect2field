@@ -29,6 +29,7 @@ class Connect2Field {
 		return json_decode($response);
 	}
 	
+	/* Clients */
 	public function all_clients() {
 		$response = $this::get_helper('Clients');
 		return $response->d;
@@ -39,6 +40,7 @@ class Connect2Field {
 		return $response->d;
 	}
 	
+	/* Jobs */
 	public function all_jobs($cust_id) {
 		$response = $this::get_helper("Clients($cust_id)/Jobs");
 		return $response->d;
@@ -49,6 +51,18 @@ class Connect2Field {
 		return $response->d;
 	}
 	
+	/* Invoices */
+	public function all_invoices() {
+		$response = $this::get_helper("Invoices");
+		return $response->d;
+	}
+	
+	public function get_invoice($id) {
+		$response = $this::get_helper("Invoices($id)");
+		return $response->d;
+	}
+	
+	/* Account types */
 	public function all_account_types() {
 		$response = $this::get_helper("AccountTypeMs");
 		return $response->d;
